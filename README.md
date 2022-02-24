@@ -7,15 +7,15 @@
 #### index.js
 ```
 function onOpen(ctx){
-	console.log("open")
+	console.log("open", ctx.Id, "conns", ctx.GetAllConns().length)
 }
 
 function onMsg(ctx, msg){
 	console.log("msg", msg)
 	var conns=ctx.GetAllConns()
-	console.log("conns", conns.length, JSON.stringify(conns))
+	// console.log("conns", conns.length, JSON.stringify(conns))
 	// conns=conns.filter(function(x){return x.Id!=ctx.Id}) //其他人
-	ctx.SendTo(conns, "Anser:"+msg)
+	ctx.SendTo(conns, "Reply:"+msg)
 }
 
 function onClose(ctx, err){
