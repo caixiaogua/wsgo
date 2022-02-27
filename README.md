@@ -3,7 +3,7 @@
 ### 底层为go，逻辑层js，轻松快速构建高性能WebSocket服务端。
 
 #### 欢迎加入QQ群：739721147
-
+#### v3.0重要更新：支持ES6语法（之前版本仅支持ES5语法）
 #### index.js
 ```
 function onOpen(ctx){
