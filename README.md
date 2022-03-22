@@ -25,8 +25,8 @@ function onMsg(ctx, msg){
 		ctx.DbDone();
 	}//操作共享变量结束
 	let conns=ctx.GetAllConns() //获取当前所有连接实例
-//	console.log("conns", conns.length, JSON.stringify(conns))
-//	conns=conns.filter(function(x){return x.Id!=ctx.Id}) //除自己外其他人
+	//console.log("conns", conns.length, JSON.stringify(conns))
+	//conns=conns.filter(function(x){return x.Id!=ctx.Id}) //除自己外其他人
 	ctx.SendTo(conns, "Reply:"+msg)
 }
 
