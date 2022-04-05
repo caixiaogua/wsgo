@@ -4,7 +4,7 @@
 
 #### 欢迎加入QQ群：739721147
 
-#### index.js
+#### app.js
 ```
 let count=0;
 let users=[];
