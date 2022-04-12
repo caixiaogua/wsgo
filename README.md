@@ -24,3 +24,45 @@ function onClose(ctx, err){
 	console.log("close",ctx.Id);
 }
 ```
+
+#### 框架接口
+```
+//ctx
+type Ctx struct {
+	Conn *websocket.Conn
+	Id   string
+	Mode int
+	Errs int
+	Msg  string
+	Info interface{}
+}
+
+//api
+map[string]interface{}{
+	"sendTo":   SendTo,
+	"syncMap":  syncMap,
+	"conns":    &conns,
+	"syncDb":   &syncDb,
+	"db":       &Db,
+	"syncLock": &syncLock,
+
+	"OS":      &kgo.KOS,
+	"FS":      &kgo.KFile,
+	"Date":    &kgo.KTime,
+	"Encode":  &kgo.KEncr,
+	"Convert": &kgo.KConv,
+	"Array":   &kgo.KArr,
+	"String":  &kgo.KStr,
+	"Number":  &kgo.KNum,
+
+	"remove":   os.Remove,
+	"rename":   os.Rename,
+	"fileInfo": os.Stat,
+	"getList":  ioutil.ReadDir,
+
+	"getFile":  getFileStr,
+	"saveFile": saveFile,
+	"httpGet":  httpGet,
+	"httpPost": httpPost,
+}
+```
