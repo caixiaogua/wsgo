@@ -42,7 +42,6 @@ map[string]interface{}{
 	"sendTo":   SendTo,
 	"syncMap":  syncMap,
 	"conns":    &conns,
-	"syncDb":   &syncDb,
 	"db":       &Db,
 	"syncLock": &syncLock,
 
