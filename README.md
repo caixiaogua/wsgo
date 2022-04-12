@@ -61,4 +61,4 @@ map[string]interface{}{
 	"httpPost": httpPost,
 }
 ```
-##### 接口引用了kgo工具库，请参考：https://github.com/kakuilan/kgo
+##### 接口引用了kgo工具库，请参考：https://pkg.go.dev/github.com/kakuilan/kgo
