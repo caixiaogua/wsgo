@@ -55,11 +55,6 @@ map[string]interface{}{
 	"String":  &kgo.KStr,
 	"Number":  &kgo.KNum,
 
-	"remove":   os.Remove,
-	"rename":   os.Rename,
-	"fileInfo": os.Stat,
-	"getList":  ioutil.ReadDir,
-
 	"getFile":  getFileStr,
 	"saveFile": saveFile,
 	"httpGet":  httpGet,
