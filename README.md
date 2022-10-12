@@ -31,19 +31,14 @@ function onClose(ctx, err){
 type Ctx struct {
 	Conn *websocket.Conn
 	Id   string
-	Mode int
-	Errs int
-	Msg  string
+	Errs int32
 	Info interface{}
 }
 
 //api
 map[string]interface{}{
 	"sendTo":   SendTo,
-	"syncMap":  syncMap,
-	"conns":    &conns,
-	"db":       &Db,
-	"syncLock": &syncLock,
+	"ctxs":	    &ctxs,
 
 	"OS":      &kgo.KOS,
 	"FS":      &kgo.KFile,
